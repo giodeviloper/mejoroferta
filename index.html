@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mejor Oferta | Tus mejores links y ofertas en Marketplaces</title>
+  <meta name="description" content="Descubre los mejores descuentos verificados y enlaces directos a las ofertas más destacadas en los principales marketplaces." />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              teal: '#006D77',
+              tealLight: '#00818D',
+              tealDark: '#005259',
+              orange: '#FF8C00',
+              orangeHover: '#F77F00',
+              orangeLight: '#FFF3E6',
+              surface: '#F8FAFC',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-orange/20 selection:text-brand-teal">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <!-- Custom SVG Icon matching the Mejor Oferta logo -->
+        <div class="w-11 h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-sm">
+            <defs>
+              <linearGradient id="tealTagGrad" x1="15" y1="15" x2="80" y2="85" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#008A96" />
+                <stop offset="100%" stop-color="#00555E" />
+              </linearGradient>
+              <linearGradient id="orangeArrowGrad" x1="30" y1="70" x2="88" y2="12" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F77F00" />
+                <stop offset="100%" stop-color="#FFA500" />
+              </linearGradient>
+            </defs>
+            <!-- Tilted Teal Price Tag Body -->
+            <path d="M47 13H69C72.5 13 75.5 14.5 77.5 17L85 26C87 28.5 87.5 32 86.5 35L79 58C78 60.5 76.5 62.5 74.5 64.5L47.5 91.5C43.5 95.5 37 95.5 33 91.5L11.5 70C7.5 66 7.5 59.5 11.5 55.5L38.5 28.5C40.5 26.5 42.5 25 45 24L47 13Z" fill="url(#tealTagGrad)" />
+            <!-- Inner Subtle Highlight Edge -->
+            <path d="M48 18H67.5C69.5 18 71.5 19 72.8 20.5L79.5 28.5C80.8 30 81.2 32.2 80.5 34L74 54.5C73.3 56.5 72.2 58 70.8 59.5L45.5 84.8C42.8 87.5 38.5 87.5 35.8 84.8L17.2 66.2C14.5 63.5 14.5 59.2 17.2 56.5L42.5 31.2C44 29.8 45.5 28.7 47.5 28L48 18Z" stroke="#00A3B0" stroke-width="1.5" stroke-opacity="0.45" />
+            <!-- White Cutout Backing for Checkmark Arrow -->
+            <path d="M29 53L43 67L74 36L67 29L92 22L85 47L78 40L47 71C44.8 73.2 41.2 73.2 39 71L25 57C22.8 54.8 22.8 51.2 25 49C27.2 46.8 26.8 50.8 29 53Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" />
+            <!-- Vibrant Orange Checkmark-Arrow -->
+            <path d="M29.5 52.5L43 66L74.5 34.5L68.5 28.5L90.5 22.5L84.5 44.5L78.5 38.5L46.5 70.5C44.5 72.5 41.5 72.5 39.5 70.5L26 57C24 55 24 52 26 50C28 48 27.5 50.5 29.5 52.5Z" fill="url(#orangeArrowGrad)" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="text-xl sm:text-2xl font-extrabold tracking-tight leading-none">
+            <span class="text-brand-teal">MEJOR</span>
+            <span class="text-brand-orange">OFERTA</span>
+          </div>
+          <span class="text-[11px] sm:text-xs font-medium text-slate-500 mt-1 hidden sm:block">
+            Tus mejores links y ofertas en Marketplaces
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links & CTA -->
+      <nav class="flex items-center gap-4 sm:gap-6">
+        <a href="#ofertas" class="text-sm font-semibold text-slate-600 hover:text-brand-teal transition-colors hidden md:inline-block">
+          Ofertas Destacadas
+        </a>
+        <a href="#como-funciona" class="text-sm font-semibold text-slate-600 hover:text-brand-teal transition-colors hidden md:inline-block">
+          ¿Cómo funciona?
+        </a>
+        <a href="#legal-footer" class="text-sm font-semibold text-slate-600 hover:text-brand-teal transition-colors hidden sm:inline-block">
+          Legal
+        </a>
+        <a href="#ofertas" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-bold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all">
+          <span>Explorar Ofertas</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative overflow-hidden bg-white border-b border-slate-200/80">
+    <!-- Subtle Decorative Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-teal/5 blur-3xl"></div>
+      <div class="absolute top-32 -left-24 w-80 h-80 rounded-full bg-brand-orange/10 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal text-xs sm:text-sm font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+          <span>Chollos verificados diariamente en los mejores marketplaces</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          Encuentra la <span class="text-brand-teal">Mejor</span> <span class="text-brand-orange">Oferta</span> sin perder tiempo buscando
+        </h1>
+
+        <!-- Tagline & Description -->
+        <p class="mt-5 text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <strong class="text-slate-800 font-semibold">Tus mejores links y ofertas en Marketplaces.</strong> Analizamos miles de productos cada día, verificamos el historial de precios y te entregamos enlaces directos con descripciones claras y transparentes.
+        </p>
+
+        <!-- Hero Action Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <a href="#ofertas" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-teal hover:bg-brand-tealDark text-white font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all">
+            <span>Ver Ofertas de Hoy</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a href="#como-funciona" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-7 py-3.5 rounded-xl border border-slate-300 transition-all">
+            <span>¿Cómo seleccionamos?</span>
+          </a>
+        </div>
+
+        <!-- Trust Highlights -->
+        <div class="mt-10 pt-8 border-t border-slate-100 grid grid-cols-3 gap-4 max-w-xl mx-auto text-center">
+          <div>
+            <p class="text-xl sm:text-2xl font-extrabold text-brand-teal">100%</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Links Directos</p>
+          </div>
+          <div>
+            <p class="text-xl sm:text-2xl font-extrabold text-brand-orange">Hasta -65%</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Ahorro Real</p>
+          </div>
+          <div>
+            <p class="text-xl sm:text-2xl font-extrabold text-brand-teal">24/7</p>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Rastreo Activo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED OFFERS SECTION ==================== -->
+  <main id="ofertas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+    <!-- Section Header & Search/Filter Bar -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Selección Curada</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+          Ofertas Destacadas en Marketplaces
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-1">
+          Filtra por categoría o busca un producto para acceder al enlace directo con descuento.
+        </p>
+      </div>
+
+      <!-- Search Input -->
+      <div class="relative w-full lg:w-72">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar oferta (ej. auriculares, hogar...)"
+          class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition-all"
+        />
+        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div id="categoryFilters" class="flex items-center gap-2.5 overflow-x-auto pb-3 mb-8 no-scrollbar" role="tablist" aria-label="Filtrar ofertas por categoría">
+      <button data-category="all" class="filter-btn active px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all bg-brand-teal text-white shadow-sm">
+        Todas las Ofertas
+      </button>
+      <button data-category="electronica" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all bg-white text-slate-600 border border-slate-200 hover:border-brand-teal hover:text-brand-teal">
+        Electrónica
+      </button>
+      <button data-category="hogar" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all bg-white text-slate-600 border border-slate-200 hover:border-brand-teal hover:text-brand-teal">
+        Hogar y Cocina
+      </button>
+      <button data-category="moda" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all bg-white text-slate-600 border border-slate-200 hover:border-brand-teal hover:text-brand-teal">
+        Moda y Accesorios
+      </button>
+      <button data-category="deporte" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all bg-white text-slate-600 border border-slate-200 hover:border-brand-teal hover:text-brand-teal">
+        Deporte y Aire Libre
+      </button>
+    </div>
+
+    <!-- Offers Grid -->
+    <div id="offersGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Cards are rendered dynamically via JavaScript for clean filtering and search -->
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="emptyState" class="hidden text-center py-16 bg-white rounded-2xl border border-slate-200">
+      <div class="w-14 h-14 mx-auto rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-3">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold text-slate-800">No encontramos ofertas con ese filtro</h3>
+      <p class="text-sm text-slate-500 mt-1">Prueba seleccionando otra categoría o limpiando el buscador.</p>
+      <button id="resetFiltersBtn" class="mt-4 inline-flex items-center px-4 py-2 rounded-xl bg-brand-teal text-white text-sm font-semibold hover:bg-brand-tealDark transition-colors">
+        Mostrar todas las ofertas
+      </button>
+    </div>
+  </main>
+
+  <!-- ==================== HOW IT WORKS SECTION ==================== -->
+  <section id="como-funciona" class="bg-white border-t border-slate-200/80 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-teal">Transparencia y Ahorro</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+          ¿Cómo funciona Mejor Oferta?
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Nuestro equipo y algoritmos filtran el ruido de los marketplaces para mostrarte únicamente descuentos reales.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/70">
+          <div class="w-12 h-12 rounded-xl bg-brand-teal text-white flex items-center justify-center font-extrabold text-lg mb-4 shadow-sm">
+            1
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Rastreamos Precios Reales</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Comparamos el historial de precios en múltiples marketplaces para descartar falsas rebajas antes de publicar una oferta.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/70">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange text-white flex items-center justify-center font-extrabold text-lg mb-4 shadow-sm">
+            2
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Redactamos Descripciones Claras</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Resumimos las características clave, valoraciones de compradores y detalles del cupón o envío para que decidas rápido.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/70">
+          <div class="w-12 h-12 rounded-xl bg-brand-teal text-white flex items-center justify-center font-extrabold text-lg mb-4 shadow-sm">
+            3
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Enlace Directo al Marketplace</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Al pulsar en <strong>"Ver Oferta"</strong> te llevamos directamente a la tienda oficial del marketplace sin intermediarios ni sobrecostes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER WITH PRIVACY & TERMS LINKS ==================== -->
+  <footer id="legal-footer" class="bg-slate-900 text-slate-300 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
+        <!-- Brand Info -->
+        <div class="md:col-span-5">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 flex-shrink-0 bg-white rounded-lg p-1">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path d="M47 13H69C72.5 13 75.5 14.5 77.5 17L85 26C87 28.5 87.5 32 86.5 35L79 58C78 60.5 76.5 62.5 74.5 64.5L47.5 91.5C43.5 95.5 37 95.5 33 91.5L11.5 70C7.5 66 7.5 59.5 11.5 55.5L38.5 28.5C40.5 26.5 42.5 25 45 24L47 13Z" fill="#006D77" />
+                <path d="M29.5 52.5L43 66L74.5 34.5L68.5 28.5L90.5 22.5L84.5 44.5L78.5 38.5L46.5 70.5C44.5 72.5 41.5 72.5 39.5 70.5L26 57C24 55 24 52 26 50C28 48 27.5 50.5 29.5 52.5Z" fill="#FF8C00" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span class="text-xl font-extrabold tracking-tight text-white">
+              MEJOR <span class="text-brand-orange">OFERTA</span>
+            </span>
+          </div>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed max-w-sm">
+            Tus mejores links y ofertas en Marketplaces. Seleccionamos descuentos reales, descripciones detalladas y enlaces verificados para ayudarte a ahorrar en cada compra.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="md:col-span-3">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Explorar</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#ofertas" class="text-slate-400 hover:text-brand-orange transition-colors">Ofertas del Día</a></li>
+            <li><a href="#como-funciona" class="text-slate-400 hover:text-brand-orange transition-colors">¿Cómo funciona?</a></li>
+            <li><a href="#" class="text-slate-400 hover:text-brand-orange transition-colors">Inicio</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Compliance Links (Prominent Privacy & Terms) -->
+        <div class="md:col-span-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Información Legal</h4>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Consulta nuestras políticas de transparencia, protección de datos y condiciones de uso de enlaces de afiliación:
+          </p>
+          <div class="flex flex-col sm:flex-row md:flex-col gap-3">
+            <!-- Link to privacy.html + Interactive Preview Modal Trigger -->
+            <a
+              href="privacy.html"
+              data-legal-modal="privacy"
+              class="legal-link-trigger inline-flex items-center justify-between px-4 py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-brand-teal text-sm font-semibold text-white transition-all group"
+            >
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Política de Privacidad</span>
+              </span>
+              <span class="text-xs text-slate-400 group-hover:text-brand-orange transition-colors">Ver &rarr;</span>
+            </a>
+
+            <!-- Link to terms.html + Interactive Preview Modal Trigger -->
+            <a
+              href="terms.html"
+              data-legal-modal="terms"
+              class="legal-link-trigger inline-flex items-center justify-between px-4 py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-brand-orange text-sm font-semibold text-white transition-all group"
+            >
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Términos y Condiciones</span>
+              </span>
+              <span class="text-xs text-slate-400 group-hover:text-brand-orange transition-colors">Ver &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Affiliate Disclosure -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; 2026 <strong class="text-slate-200">Mejor Oferta</strong>. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-5">
+          <a href="privacy.html" data-legal-modal="privacy" class="legal-link-trigger hover:text-white underline underline-offset-4">Política de Privacidad</a>
+          <a href="terms.html" data-legal-modal="terms" class="legal-link-trigger hover:text-white underline underline-offset-4">Términos y Condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE LEGAL MODAL (PRIVACY & TERMS) ==================== -->
+  <div id="legalModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] animate-fadeIn">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span id="modalBadge" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-teal/10 text-brand-teal">Documento Legal</span>
+          <h3 id="modalTitle" class="text-lg font-extrabold text-slate-900">Título del Documento</h3>
+        </div>
+        <button id="closeModalBtn" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-200/70 transition-colors" aria-label="Cerrar ventana">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Scrollable Content -->
+      <div id="modalBody" class="p-6 overflow-y-auto text-sm text-slate-600 space-y-4 leading-relaxed">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span id="modalFileRef" class="text-xs text-slate-400 font-mono">Archivo: privacy.html</span>
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <button id="closeModalFooterBtn" class="px-5 py-2.5 rounded-xl bg-brand-teal hover:bg-brand-tealDark text-white text-sm font-bold transition-colors w-full sm:w-auto">
+            Entendido
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION FOR OFFER LINKS ==================== -->
+  <div id="toastNotification" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-slate-900 text-white px-5 py-4 rounded-2xl shadow-xl border border-slate-700 flex items-start gap-3">
+    <div class="w-8 h-8 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+      </svg>
+    </div>
+    <div>
+      <p id="toastTitle" class="text-sm font-bold text-white">Redirigiendo al Marketplace...</p>
+      <p id="toastDesc" class="text-xs text-slate-300 mt-1">Abriendo enlace verificado con descuento aplicado.</p>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // Sample curated marketplace offers data
+    const OFFERS_DATA = [
+      {
+        id: 1,
+        title: "Auriculares Inalámbricos Cancelación Activa ANC Pro",
+        category: "electronica",
+        categoryLabel: "Electrónica",
+        marketplace: "Amazon",
+        discount: "-42%",
+        originalPrice: "129,99 €",
+        offerPrice: "74,99 €",
+        description: "Sonido Hi-Res, hasta 40 horas de batería y cancelación híbrida de ruido. Mínimo histórico verificado con envío gratuito.",
+        image: "https://placehold.co/600x400/006D77/FFFFFF?text=Auriculares+ANC+Pro",
+        url: "#oferta-auriculares"
+      },
+      {
+        id: 2,
+        title: "Freidora de Aire Digital Dual 8L Acero Inoxidable",
+        category: "hogar",
+        categoryLabel: "Hogar y Cocina",
+        marketplace: "AliExpress Plaza",
+        discount: "-50%",
+        originalPrice: "159,00 €",
+        offerPrice: "79,50 €",
+        description: "Doble cesta independiente con 10 programas automáticos y pantalla táctil LED. Envío rápido en 48h desde almacén local.",
+        image: "https://placehold.co/600x400/FF8C00/FFFFFF?text=Freidora+Aire+Dual+8L",
+        url: "#oferta-freidora"
+      },
+      {
+        id: 3,
+        title: "Zapatillas Running Amortiguación Reactiva Ultralight",
+        category: "deporte",
+        categoryLabel: "Deporte y Aire Libre",
+        marketplace: "Miravia",
+        discount: "-38%",
+        originalPrice: "110,00 €",
+        offerPrice: "68,20 €",
+        description: "Malla transpirable de alta densidad y suela de retorno energético. Ideal para entrenamientos diarios en asfalto.",
+        image: "https://placehold.co/600x400/005259/FFFFFF?text=Zapatillas+Running",
+        url: "#oferta-zapatillas"
+      },
+      {
+        id: 4,
+        title: "Mochila Urbana Antirrobo Impermeable para Portátil 16\"",
+        category: "moda",
+        categoryLabel: "Moda y Accesorios",
+        marketplace: "Amazon",
+        discount: "-35%",
+        originalPrice: "59,95 €",
+        offerPrice: "38,90 €",
+        description: "Puerto de carga USB integrado, cremalleras ocultas y respaldo ergonómico acolchado. Perfecta para oficina o viajes.",
+        image: "https://placehold.co/600x400/F77F00/FFFFFF?text=Mochila+Antirrobo+16",
+        url: "#oferta-mochila"
+      },
+      {
+        id: 5,
+        title: "Smartwatch Deportivo GPS + Pulsioxímetro AMOLED",
+        category: "electronica",
+        categoryLabel: "Electrónica",
+        marketplace: "PcComponentes",
+        discount: "-45%",
+        originalPrice: "149,00 €",
+        offerPrice: "81,95 €",
+        description: "Pantalla AMOLED siempre activa, más de 100 modos deportivos, resistencia al agua 5 ATM y autonomía de 14 días.",
+        image: "https://placehold.co/600x400/00818D/FFFFFF?text=Smartwatch+AMOLED",
+        url: "#oferta-smartwatch"
+      },
+      {
+        id: 6,
+        title: "Robot Aspirador Láser LiDAR con Base de Autovaciado",
+        category: "hogar",
+        categoryLabel: "Hogar y Cocina",
+        marketplace: "eBay",
+        discount: "-55%",
+        originalPrice: "399,00 €",
+        offerPrice: "179,00 €",
+        description: "Mapeo inteligente por habitaciones, potencia de succión de 4000Pa y fregado electrónico controlado desde la app.",
+        image: "https://placehold.co/600x400/006D77/FFFFFF?text=Robot+Aspirador+LiDAR",
+        url: "#oferta-robot"
+      }
+    ];
+
+    // Legal modal content for Privacy Policy (privacy.html) and Terms & Conditions (terms.html)
+    const LEGAL_CONTENT = {
+      privacy: {
+        badge: "privacy.html",
+        title: "Política de Privacidad",
+        fileRef: "Ruta enlazada: privacy.html",
+        html: `
+          <p class="font-semibold text-slate-800">Última actualización: Noviembre 2026</p>
+          <p>En <strong>Mejor Oferta</strong> respetamos tu privacidad y nos comprometemos a proteger los datos personales de nuestros usuarios conforme al Reglamento General de Protección de Datos (RGPD).</p>
+          <h4 class="font-bold text-slate-900 pt-2">1. Datos que recopilamos</h4>
+          <p>Nuestra plataforma funciona como un agregador informativo de enlaces y descripciones de ofertas en marketplaces. No requerimos registro obligatorio para navegar ni acceder a los descuentos publicados. Únicamente recopilamos métricas anónimas de navegación y clics en enlaces salientes para mejorar la calidad de las ofertas mostradas.</p>
+          <h4 class="font-bold text-slate-900 pt-2">2. Cookies y Enlaces de Afiliación</h4>
+          <p>Al hacer clic en los botones <em>"Ver Oferta"</em>, serás redirigido a marketplaces externos (como Amazon, AliExpress, Miravia o eBay). Dichos sitios pueden utilizar cookies propias para atribuir la referencia de la oferta sin coste adicional para ti.</p>
+          <h4 class="font-bold text-slate-900 pt-2">3. Tus Derechos</h4>
+          <p>Puedes ejercer tus derechos de acceso, rectificación o supresión escribiendo a nuestro equipo de privacidad en <strong>privacidad@mejoroferta.app</strong>.</p>
+        `
+      },
+      terms: {
+        badge: "terms.html",
+        title: "Términos y Condiciones de Uso",
+        fileRef: "Ruta enlazada: terms.html",
+        html: `
+          <p class="font-semibold text-slate-800">Última actualización: Noviembre 2026</p>
+          <p>Bienvenido a <strong>Mejor Oferta</strong>. Al utilizar nuestra aplicación web y acceder a nuestros enlaces y descripciones de ofertas, aceptas los siguientes términos:</p>
+          <h4 class="font-bold text-slate-900 pt-2">1. Naturaleza del Servicio</h4>
+          <p><strong>Mejor Oferta</strong> actúa exclusivamente como plataforma de curación y difusión de enlaces hacia ofertas disponibles en marketplaces de terceros. No vendemos directamente los productos listados ni gestionamos pagos o envíos.</p>
+          <h4 class="font-bold text-slate-900 pt-2">2. Variación de Precios y Disponibilidad</h4>
+          <p>Los precios, porcentajes de descuento y disponibilidad mostrados en nuestras descripciones son verificados en el momento de su publicación, pero pueden cambiar sin previo aviso según las condiciones de cada marketplace.</p>
+          <h4 class="font-bold text-slate-900 pt-2">3. Transparencia de Afiliados</h4>
+          <p>Algunos enlaces salientes contienen identificadores de afiliado. Si realizas una compra a través de ellos, <strong>Mejor Oferta</strong> puede recibir una pequeña comisión por parte del marketplace sin que el precio final del producto aumente para ti.</p>
+        `
+      }
+    };
+
+    // DOM Elements
+    const offersGrid = document.getElementById('offersGrid');
+    const emptyState = document.getElementById('emptyState');
+    const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+    // Modal Elements
+    const legalModal = document.getElementById('legalModal');
+    const modalBadge = document.getElementById('modalBadge');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const modalFileRef = document.getElementById('modalFileRef');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const closeModalFooterBtn = document.getElementById('closeModalFooterBtn');
+
+    // Toast Elements
+    const toastNotification = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastDesc = document.getElementById('toastDesc');
+
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let toastTimeout = null;
+
+    // Render Offers Function
+    function renderOffers() {
+      const filtered = OFFERS_DATA.filter(offer => {
+        const matchesCategory = currentCategory === 'all' || offer.category === currentCategory;
+        const query = currentSearch.trim().toLowerCase();
+        const matchesSearch =
+          offer.title.toLowerCase().includes(query) ||
+          offer.description.toLowerCase().includes(query) ||
+          offer.marketplace.toLowerCase().includes(query) ||
+          offer.categoryLabel.toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        offersGrid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      offersGrid.innerHTML = filtered.map(offer => `
+        <article class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col group">
+          <!-- Product Image + Badges -->
+          <div class="relative aspect-[16/10] bg-slate-100 overflow-hidden">
+            <img
+              src="${offer.image}"
+              alt="${offer.title}"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/006D77/FFFFFF?text=Mejor+Oferta';"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <!-- Discount Pill -->
+            <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-extrabold px-3 py-1.5 rounded-xl shadow-md">
+              ${offer.discount} DTO.
+            </span>
+            <!-- Marketplace Tag -->
+            <span class="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-brand-teal text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm border border-slate-200/60">
+              ${offer.marketplace}
+            </span>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-5 sm:p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between text-xs font-semibold text-brand-teal mb-2">
+              <span>${offer.categoryLabel}</span>
+              <span class="inline-flex items-center gap-1 text-emerald-600">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Verificada
+              </span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-brand-teal transition-colors">
+              ${offer.title}
+            </h3>
+
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed flex-1">
+              ${offer.description}
+            </p>
+
+            <!-- Price & CTA Row -->
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+              <div>
+                <span class="block text-xs text-slate-400 line-through">${offer.originalPrice}</span>
+                <span class="text-xl font-extrabold text-slate-900">${offer.offerPrice}</span>
+              </div>
+
+              <a
+                href="${offer.url}"
+                data-offer-title="${offer.title}"
+                data-marketplace="${offer.marketplace}"
+                class="offer-cta-btn inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white text-sm font-bold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all"
+              >
+                <span>Ver Oferta</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      // Attach click feedback to offer buttons
+      document.querySelectorAll('.offer-cta-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const title = btn.getAttribute('data-offer-title');
+          const marketplace = btn.getAttribute('data-marketplace');
+          showToast(`Enlace a ${marketplace}`, `Abriendo oferta verificada: "${title}"`);
+        });
+      });
+    }
+
+    // Category Filter Click Handlers
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-brand-teal', 'text-white', 'shadow-sm');
+          b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+        });
+        btn.classList.add('active', 'bg-brand-teal', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+
+        currentCategory = btn.getAttribute('data-category');
+        renderOffers();
+      });
+    });
+
+    // Search Input Handler
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value;
+      renderOffers();
+    });
+
+    // Reset Filters Handler
+    resetFiltersBtn.addEventListener('click', () => {
+      currentCategory = 'all';
+      currentSearch = '';
+      searchInput.value = '';
+      filterButtons.forEach(b => {
+        if (b.getAttribute('data-category') === 'all') {
+          b.classList.add('active', 'bg-brand-teal', 'text-white', 'shadow-sm');
+          b.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+        } else {
+          b.classList.remove('active', 'bg-brand-teal', 'text-white', 'shadow-sm');
+          b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+        }
+      });
+      renderOffers();
+    });
+
+    // Legal Modal Functions (Privacy & Terms Preview)
+    function openLegalModal(type) {
+      const content = LEGAL_CONTENT[type];
+      if (!content) return;
+
+      modalBadge.textContent = content.badge;
+      modalTitle.textContent = content.title;
+      modalBody.innerHTML = content.html;
+      modalFileRef.textContent = content.fileRef;
+
+      legalModal.classList.remove('hidden');
+      legalModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLegalModal() {
+      legalModal.classList.add('hidden');
+      legalModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    // Intercept clicks on privacy.html & terms.html links so users can preview immediately
+    document.querySelectorAll('.legal-link-trigger').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalType = link.getAttribute('data-legal-modal');
+        openLegalModal(modalType);
+      });
+    });
+
+    closeModalBtn.addEventListener('click', closeLegalModal);
+    closeModalFooterBtn.addEventListener('click', closeLegalModal);
+    legalModal.addEventListener('click', (e) => {
+      if (e.target === legalModal) closeLegalModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !legalModal.classList.contains('hidden')) {
+        closeLegalModal();
+      }
+    });
+
+    // Toast Helper
+    function showToast(title, desc) {
+      toastTitle.textContent = title;
+      toastDesc.textContent = desc;
+      toastNotification.classList.remove('hidden');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toastNotification.classList.add('hidden');
+      }, 3500);
+    }
+
+    // Initial render
+    renderOffers();
+  </script>
+</body>
+</html>
